@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Product Id </th>
+        <th>Name </th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of this.productService.addToCartList;">
+        <td><img src={{e.imgUrl}} class="card-img-top" alt={{e.name}} [ngStyle]="{'height': '5rem'}"/></td>
+        <td>{{e.id}}</td>
+        <td>{{e.name}}</td>
+        <td>Rs. 0</td>
+      </tr>
+    </tbody>
+  </table>

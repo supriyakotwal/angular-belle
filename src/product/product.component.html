@@ -1,0 +1,13 @@
+
+ <div class="row" [ngStyle]="{'margin-right': '0'}">        
+    <div class="col-sm-4" *ngFor="let e of lis;">
+        <div key={e.id} class="card" [ngStyle]="{'width': '15rem','margin-bottom': '15px'}">
+            <img src={{e.imgUrl}} class="card-img-top" alt={{e.name}} [ngStyle]="{'height': '5rem'}"/>
+            <div class="card-body">
+                <a routerLink='/product/details/{{e.id}}'>
+                    <h5 class="card-title">{{e.name}}</h5></a>
+                <p class="card-text">{{e.category}}</p>
+            </div>
+        </div>
+    </div>                   
+</div>

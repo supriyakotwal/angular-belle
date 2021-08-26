@@ -1,0 +1,32 @@
+<h2>Welcome to Belle Cosmetics</h2>
+<div class="col-sm-4">
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+    ex ea commodo consequat.
+
+</p>
+</div>
+<div class="col-sm-8">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+        <div class="form-group">
+          <label for="emailId">Email address</label>
+          <input type="email" class="form-control" id="emailId" aria-describedby="emailHelp"
+           placeholder="Enter email" formControlName="emailId" required  ngModel [pattern]="emailPattern">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="mobileNumber">Mobile Number</label>
+          <input type="text" class="form-control" id="mobileNumber" placeholder="Mobile Number"
+           maxlength="10" size="10" formControlName="mobileNumber" ngModel [pattern]="mobileNumberPattern">
+        </div>
+        <div class="form-group">
+          <label for="comment">Comment</label>
+          <input type="text" class="form-control" id="comment" placeholder="Comment" 
+          formControlName="comment" required>
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid">Submit</button>
+        <br/>
+      </form>
+</div>

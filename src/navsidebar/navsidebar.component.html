@@ -1,0 +1,21 @@
+<div *ngIf="this.loginService.isLoggedIn" class="navSidebar">
+    <ul>
+        <li class="navsidebar-image">
+            <a class="navbar-brand" routerLink="/">
+                <img class="justify-content-center mb-4" src="/assets/Logo-Butterfly.svg" alt="Belle" width="72" height="57"/>
+            </a> 
+        </li>
+        <li class="navsidebar-item">
+        <a (click)="sender('Products')" class="navbar-brand" routerLink="/product">Products</a>
+        </li>
+        <li (click)="sender('Shopping Cart')" class="navsidebar-item">
+        <a class="navbar-brand" routerLink="/cart">Shopping Cart</a>
+        </li>
+        <li (click)="sender('About Us')" class="navsidebar-item">
+        <a class="navbar-brand" routerLink="/home">About Us</a>
+        </li>
+        <li class="navsidebar-item">
+        <a routerLink="/" (click)="logout()">Logout</a>
+        </li>
+    </ul>
+</div>

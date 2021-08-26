@@ -1,0 +1,35 @@
+.sidebar {
+  
+    height: 100%;
+    float: left;
+    width: 15%;
+    background: #F5F5F5;
+  
+  }
+  .navSidebar {
+    width:100%;
+    margin:0;
+    min-height:auto;
+    height: auto;
+    float: left;
+  }
+  .navSidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .navSidebar li.navsidebar-item {
+    padding: 15px;
+  }
+  .navSidebar li.navsidebar-item:hover {
+    background: #CCC;
+  }
+  .navSidebar li.navsidebar-image {
+    padding-left: 15px;
+  }
+  .navSidebar a{
+    text-decoration: none;
+    color: #000;
+  }
+  .navSidebar a:hover{
+    color: #000;
+  }

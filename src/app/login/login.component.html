@@ -1,0 +1,17 @@
+<div class="col-sm-8">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+        <div class="form-group">
+          <label for="emailId">Email address</label>
+          <input type="email" class="form-control" id="emailId" aria-describedby="emailHelp"
+           placeholder="Enter email" formControlName="emailId" required  ngModel [pattern]="emailPattern">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password" ngModel>
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid">Login</button>
+        <br/><br/>
+      </form>
+</div>
